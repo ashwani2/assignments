@@ -5,9 +5,14 @@ Try running it for
 2. Sum from 1-100000
 3. Sum from 1-1000000000
 Hint - use Date class exposed in JS
-There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
 
 function calculateTime(n) {
-    return 0.01;
-}
+    const startDate = Date.now()
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+      sum += i;
+    }
+    const endDate = Date.now()
+    return endDate - startDate;
+  }

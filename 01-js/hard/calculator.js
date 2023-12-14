@@ -14,8 +14,47 @@
         2. the input can have invalid non-numerical characters like `5 + abc`, you're supposed to throw error for such inputs
 
   Once you've implemented the logic, test your code by running
+  - `npm run test-calculator`
 */
 
-class Calculator {}
+class Calculator {
+  total=0
+
+  add(number){
+    this.total+=number
+    return this.total
+  }
+  subtract(number){
+    this.total-=number
+    return this.total
+  }
+  multiply(number){
+    this.total*=number
+    return this.total
+  }
+  divide(number){
+    if(number===0){
+      throw new Error('Cannot get divied by 0')
+    }
+    this.total=this.total/number
+    return this.total
+  }
+  clear(){
+    this.total=0
+  }
+  getResult(){
+    if(this.total===Infinity){
+      throw new Error('expression is not correct')
+    }
+    return this.total
+  }
+  calculate(expr){
+    let expression=expr.trim()
+    this.total=eval(expression)
+    if(this.total===Infinity){
+      throw new Error('expression is not correct')
+    }
+  }
+}
 
 module.exports = Calculator;
