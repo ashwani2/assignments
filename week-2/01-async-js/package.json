@@ -8,7 +8,7 @@
     "2-sleep-completely": "npx jest ./tests/2-sleep-completely.test.js",
     "3-promise-all": "npx jest ./tests/3-promise-all.test.js",
     "4-promise-chain": "npx jest ./tests/4-promise-chain.test.js",
-    "all": "npx jest ./tests/"
+    "test-all": "npx jest ./tests/"
   },
   "keywords": [],
   "author": "",
